@@ -7,22 +7,13 @@ import java.util.Arrays;
  * 它的基本思想是: 将整数按位数切割成不同的数字,然后按每个位数分别比较。
  */
 public class RadixSortTest {
-
-    public static void main(String[] args) {
-        int[] src = {120, 231, 345, 657, 204, 315, 137, 239, 467, 892};
-        System.out.println("排序前的数组: " + Arrays.toString(src));
-
-        int[] result = sort(src);
-        System.out.println("排序后的数组: " + Arrays.toString(result));
-    }
-
     /**
      * 基数排序
      *
      * @param arr 排序前的数组
      * @return 排序后的数组
      */
-    private static int[] sort(int[] arr) {
+    public static int[] sort(int[] arr) {
         int[] result = new int[arr.length];
         int[] count = new int[10];
 
@@ -54,4 +45,11 @@ public class RadixSortTest {
         return result;
     }
 
+    public static void main(String[] args) {
+        int[] src = {120, 231, 345, 657, 204, 315, 137, 239, 467, 892};
+        System.out.println("排序前的数组: " + Arrays.toString(src));
+
+        int[] result = sort(src);
+        System.out.println("排序后的数组: " + Arrays.toString(result));
+    }
 }
