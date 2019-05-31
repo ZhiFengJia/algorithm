@@ -17,8 +17,9 @@ import java.util.Map;
  * @date 2019/5/31 11:15:29
  */
 public class Solution_2 {
-    //52ms
+    //52ms(暴力法)
     public int[] twoSum1(int[] nums, int target) {
+        //遍历数组中每个元素
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if ((nums[i] + nums[j]) == target) {
@@ -29,13 +30,15 @@ public class Solution_2 {
         return null;
     }
 
-    //9ms
+    //9ms(Hash查找)
     public int[] twoSum2(int[] nums, int target) {
         Map map = new HashMap(nums.length);
         for (int i = 0; i < nums.length; i++) {
+            //将数组存到HashMap中,以利用key的hash特性.
             map.put(nums[i], i);
         }
         for (int i = 0; i < nums.length; i++) {
+            //在key的hash表中查找是否有目标值,并且目标值对应的索引不等于自身.
             if (map.containsKey(target - nums[i]) &&
                     ((int) map.get(target - nums[i]) != i)) {
                 return new int[]{i, (int) map.get(target - nums[i])};
@@ -73,7 +76,7 @@ public class Solution_2 {
     public static void main(String[] args) {
         Solution_2 solution_2 = new Solution_2();
 
-        int[] nums ={2, 7, 11, 15};
+        int[] nums = {2, 7, 11, 15};
         int target = 9;
 //        int[] nums = {3, 2, 4};
 //        int target = 6;
