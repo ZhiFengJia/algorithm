@@ -43,7 +43,7 @@ public class CountSortTest {
 
 
     public static void main(String[] args) {
-        int[] src = {12, 23, 34, 65, 20, 31, 13, 23, 46};
+        int[] src = {12, 23, 34, 54, 20, 31, 13, 23, 46, 53};
         System.out.println("排序前的数组: " + Arrays.toString(src));
 
         int[] result = sort(src);

@@ -26,13 +26,13 @@ public class RadixSortTest {
                 int num = arr[j] / division % 10;
                 count[num]++;
             }
-            System.out.println("统计次数" + Arrays.toString(count));
+            System.out.println("统计次数: " + Arrays.toString(count));
 
             // 目的是让更改后的count[i]的值,是该数据在result[]中的位置.
             for (int m = 1; m < count.length; m++) {
                 count[m] = count[m] + count[m - 1];
             }
-            System.out.println("位置: " + Arrays.toString(count));
+            System.out.println("数据位置: " + Arrays.toString(count));
 
             for (int n = arr.length - 1; n >= 0; n--) {
                 int num = arr[n] / division % 10;
