@@ -39,6 +39,7 @@ public class Solution_1 {
     private int x = 0, y = 0;
     private Direction direction = Direction.NORTH;
 
+    //8ms
     public boolean isRobotBounded(String instructions) {
         if (instructions.length() < 1 || instructions.length() > 100)
             throw new RuntimeException("length error:" + instructions.length());
