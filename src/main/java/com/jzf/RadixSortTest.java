@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * 基数排序(Radix Sort)是桶排序的扩展,
- * 它的基本思想是: 将整数按位数切割成不同的数字,然后按每个位数分别比较。
+ * 它的基本思想是: 将整数按位数切割成不同的数字,然后按每个位数分别比较(用计数排序).
  */
 public class RadixSortTest {
     /**
